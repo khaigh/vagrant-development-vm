@@ -1,15 +1,15 @@
 # vagrant-development-vm
 
-This repo holds all my configuration for my development environment. It supports osx, windows, and linux environments leveraging vargant.
+This repo holds the configuration for my development environment. It supports osx, windows, and linux environments leveraging vargant.
 
 ## requirements
 
-Install [Vagrant](vagrantup.com) and. [VirtualBox](www.virtualbox.org).
+Install [Vagrant](vagrantup.com) and [VirtualBox](www.virtualbox.org).
 
 ## install
 
 ```
-git clone https://github.com/khaigh/dotfiles.git
+git clone https://github.com/khaigh/vagrant-development-vm.git
 up
 ssh
 ```
