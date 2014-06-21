@@ -33,7 +33,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # install user specific dev tools
     config.vm.provision "shell" do |s|
        s.path = "#{local_vm_files}/user_provision.sh"
-       s.args = [remote_vm_files]
+       s.args = [remote_vm_files, "vagrant", "vagrant"]
        s.privileged = false
     end
 

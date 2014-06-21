@@ -140,7 +140,7 @@
 
 " Plugins {
     " NERDTree {
-         autocmd VimEnter * NERDTree " Start NERDTree on startup
+         "autocmd VimEnter * NERDTree " Start NERDTree on startup
          autocmd BufEnter * NERDTreeMirror
          autocmd VimEnter * wincmd w
     " }

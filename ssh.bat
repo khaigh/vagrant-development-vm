@@ -1,1 +1,1 @@
-putty -load "Vagrant" -l vagrant
+start putty -load "Vagrant" -l vagrant

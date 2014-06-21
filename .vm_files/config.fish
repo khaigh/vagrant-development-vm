@@ -3,14 +3,13 @@
 # ---------Environment Variables-------- #
 set -x DOCKER_HOST unix:///var/run/docker.sock
 set -x EDITOR vim
-set -x GOROOT $HOME/go
-set -x GOBIN $GOROOT/bin
-set -x GOPATH $HOME/development/gocode
+set -x GOROOT /usr/local/go
+set -x GOPATH $HOME/go
 
 # ---------------Path------------------- #
-set PATH $HOME/go/bin $PATH;
+set PATH $GOPATH/bin $PATH;
 set PATH $HOME/.vm_files/bin $PATH;
-set PATH $GOBIN $PATH
+set PATH $GOROOT/bin $PATH;
 set PATH /usr/sbin $PATH;
 
 # --------------Aliases----------------- #
@@ -99,7 +98,6 @@ set -g fish_color_operator    $orange
 set -g fish_color_escape      $cyan
 
 # Used by fish_prompt
-
 set -g fish_color_hostname    $cyan
 set -g fish_color_cwd         $yellow
 set -g fish_color_git         $green
@@ -122,7 +120,7 @@ function fish_prompt
   set -l green (set_color "green")
   set -l normal (set_color -o "blue")
 
-  set -l cwd $cyan(basename (prompt_pwd))
+  set -l cwd $cyan(prompt_pwd)
 
   if [ (_git_branch_name) ]
     set -l git_branch (_git_branch_name)
