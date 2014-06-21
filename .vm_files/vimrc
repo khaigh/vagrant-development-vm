@@ -73,48 +73,25 @@
     hi PmenuThumb guifg=#f8f8f8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
 " }
 
-
-" Filetype Specific {
-    " reStructuredText {
-        au BufRead *.rst setlocal expandtab shiftwidth=4 tabstop=8 smartindent
-    " }
-
-    " go {
-        autocmd BufWritePre *.go Fmt " go fmt on save
-        abbrev gobi :!go build -v . ./... && go install . ./...<CR>
-        map <buffer> <S-e> :w<CR>:!go run % <CR>
-        map <buffer> <S-b> :w<CR>:!go build % <CR>
-        autocmd FileType go set omnifunc=gocomplete#Complete
-    " }
-
-    " css {
-        autocmd FileType css set omnifunc=csscomplete#CompleteCSS
-    " }
-
-    " html {
-        autocmd FileType html,markdown set omnifunc=htmlcomplete#CompleteTags
-    " }
-
-    " javascript {
-        autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-    " }
-
-    " xml {
-        autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
-    " }
-" }
-
-
 " General Key Binding {
+    " Make navigation easier between windows
     map <C-j> <C-W>j
     map <C-k> <C-W>k
     map <C-h> <C-W>h
     map <C-l> <C-W>l
+
+    " function key mapping
+    " F1 - defaults to help
     nnoremap <F2> :NERDTreeToggle<CR>
-    nnoremap <F3> :TagbarToggle<CR>
-    nmap <K> :Godoc<CR>
-    map <F6> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
-    nnoremap <F8> :!/opt/local/bin/ctags -R --python-kinds=-i *.py<CR>
+    map <F3> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+    " F4 - Build (defined in ftplugins)
+    " F5 - Run (defined in ftplugins)
+    " F6 - Test (defined in ftplugins)
+    nnoremap <F7> :TagbarToggle<CR>
+    " F8 - Formating and Linting (defined in ftplugins)
+    map <F9> :TagmaTasks **/*.%:e<CR>
+    " F10 - Documentation (defined in ftplugins)
+
     inoremap <Nul> <C-x><C-o>
 
     " For local replace
@@ -128,20 +105,18 @@
     inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
     inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
     inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
-
     inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
       \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
-
     inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
       \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
+    "Fix common command line errors
     cmap w!! w !sudo tee % >/dev/null
 " }
 
 " General Shortcuts {
     abbrev spell setlocal spell spelllang=en_us<CR>
 " }
-
 
 " Plugins {
     " NERDTree {
