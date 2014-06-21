@@ -67,6 +67,10 @@
     autocmd BufEnter * :syntax sync fromstart
     autocmd QuickFixCmdPost [^l]* nested cwindow
     autocmd QuickFixCmdPost    l* nested lwindow
+
+    hi Pmenu guifg=#000000 guibg=#f8f8f8 ctermfg=black ctermbg=Lightgray
+    hi PmenuSbar guifg=#8A95A7 guibg=#f8f8f8 gui=NONE ctermfg=darkcyan ctermbg=lightgray cterm=NONE
+    hi PmenuThumb guifg=#f8f8f8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
 " }
 
 
@@ -106,13 +110,9 @@
     map <C-k> <C-W>k
     map <C-h> <C-W>h
     map <C-l> <C-W>l
-    nnoremap m2<cr> :m+2
-    nnoremap m1<cr> :m+
-    nnoremap m-2<cr> :m-2
     nnoremap <F2> :NERDTreeToggle<CR>
     nnoremap <F3> :TagbarToggle<CR>
     nmap <K> :Godoc<CR>
-    nmap <F4> :TMToggle<CR>
     map <F6> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
     nnoremap <F8> :!/opt/local/bin/ctags -R --python-kinds=-i *.py<CR>
     inoremap <Nul> <C-x><C-o>
@@ -124,13 +124,18 @@
     nnoremap gR gD:%s/<C-R>///gc<left><left><left>
 
     "For a better popup
+    inoremap <expr> <Esc> pumvisible() ? "\<C-e>" : "\<Esc>"
     inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+    inoremap <expr> <Down> pumvisible() ? "\<C-n>" : "\<Down>"
+    inoremap <expr> <Up> pumvisible() ? "\<C-p>" : "\<Up>"
 
     inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
       \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
     inoremap <expr> <M-,> pumvisible() ? '<C-n>' :
       \ '<C-x><C-o><C-n><C-p><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+    cmap w!! w !sudo tee % >/dev/null
 " }
 
 " General Shortcuts {
@@ -202,6 +207,10 @@
         let g:multi_cursor_prev_key='<C-o>'
         let g:multi_cursor_skip_key='<C-x>'
         let g:multi_cursor_quit_key='<Esc>'
+    " }
+    "
+    " SuperTab {
+        let g:SuperTabDefaultCompletionType = "context"
     " }
 " }
 
