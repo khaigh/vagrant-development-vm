@@ -18,7 +18,7 @@ After the repo is cloned, the **up** command will start the virtual machine inst
 The **ssh** command will shell into the virtual machine.
 
 #### NOTES on Windows
-_On windows, ssh uses putty as the ssh client. I created putty.reg to register a putty session profile with a solarized color terminal that launches tmux.
+_On windows, ssh uses putty as the ssh client. Putty is an optional prerequisite on windows. I created putty.reg to register a putty session profile with a solarized color terminal that launches tmux.
 Run regedit on putty.reg to create a profile that will connect to the local vagrant virtual machine. This only needs to be done once per machine. Before tweaking the registry, make sure you have a full backup of your system. If anything goes wrong, you may end up losing all your data.  Use at your own risk._
 
 ## what's inside
