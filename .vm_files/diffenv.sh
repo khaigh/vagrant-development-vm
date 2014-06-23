@@ -1,4 +1,5 @@
 #! /bin/sh
+# utility to check if there are any changes to my environment
 
 echo "[Diffing config.fish]"
 diff ~/.config/fish/config.fish /vagrant/.vm_files/config.fish

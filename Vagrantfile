@@ -22,7 +22,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     remote_vm_files = "/vagrant/.vm_files"
 
     # install docker
-    config.vm.provision :shell, :path => "#{local_vm_files}/docker.sh"
+    config.vm.provision "shell" do |s|
+       s.path = "#{local_vm_files}/docker.sh"
+       s.args = vagrant
+    end
 
     # install dev tools
     config.vm.provision "shell" do |s|

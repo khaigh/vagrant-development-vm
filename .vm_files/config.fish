@@ -135,18 +135,6 @@ function fish_prompt
   printf '%s%s|%s%s> %s' $cwd $red $git_info $normal $normal
 end
 
-function run_docker
-    docker run -ti --rm --privileged -v $HOME/docker:/go/src/github.com/dotcloud/docker docker bash 
-end
-
-function remove_images_none 
-    docker rmi (docker images | grep "<none>" | awk '{print $3}')
-end
-
-function clean_merged_branches
-    git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
-end
-
 function test_fish_prompt
   set -l cyan (set_color "cyan")
   set -l yellow (set_color "yellow")

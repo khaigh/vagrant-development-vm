@@ -36,3 +36,4 @@ go get code.google.com/p/go.tools/cmd/oracle
 go get github.com/golang/lint/golint
 go get github.com/kisielk/errcheck
 go get github.com/jstemmer/gotags
+go get github.com/mattn/gom
