@@ -24,7 +24,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # install docker
     config.vm.provision "shell" do |s|
        s.path = "#{local_vm_files}/docker.sh"
-       s.args = vagrant
+       s.args = "vagrant"
     end
 
     # install dev tools
