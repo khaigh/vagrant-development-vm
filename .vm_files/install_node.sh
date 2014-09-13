@@ -18,8 +18,6 @@ curl -L https://npmjs.org/install.sh | sh
 npm install -g gulp
 
 # install gem for sass and compass
-sudo apt-get install --no-install-recommends -y rubygems
+sudo apt-get install --no-install-recommends -y ruby1.9.1-dev rubygems
 
-sudo gem install sass
-sudo gem install compass --pre
-
+sudo gem install bundler
