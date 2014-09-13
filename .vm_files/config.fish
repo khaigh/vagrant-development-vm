@@ -11,7 +11,6 @@ set PATH $GOPATH/bin $PATH;
 set PATH $HOME/local/bin $PATH;
 set PATH $GOROOT/bin $PATH;
 set PATH /usr/sbin $PATH;
-set PATH $HOME
 
 # --------------Aliases----------------- #
 alias lsa='ls -lah --color=auto'
