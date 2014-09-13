@@ -25,6 +25,9 @@ mkdir -p $HOME/go/bin
 mkdir -p $HOME/go/pkg
 mkdir -p $HOME/go/src
 
+# make local/bin directory (for optional pkgs)
+mkdir -p $HOME/local/bin
+
 # go get
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
