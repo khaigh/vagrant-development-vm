@@ -3,8 +3,9 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "phusion-open-ubuntu-12.04-amd64"
-  config.vm.box_url = "https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-12.04-amd64-vbox.box"
+  config.vm.box = "phusion-open-ubuntu-14.04-amd64"
+  config.vm.box_url = "https://oss-binaries.phusionpassenger.com/vagrant/boxes/latest/ubuntu-14.04-amd64-vbox.box"
+
 
   # configure network
   config.vm.network "private_network", ip: "10.2.0.10", netmask: "255.255.0.0"
