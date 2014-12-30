@@ -91,6 +91,7 @@
     " F8 - Formating and Linting (defined in ftplugins)
     map <F9> :TagmaTasks **/*.%:e<CR>
     " F10 - Documentation (defined in ftplugins)
+    nnoremap <F12> :r !od -vAn -N4 -tu4 < /dev/urandom <bar> tr -d " \n" <CR>
 
     inoremap <Nul> <C-x><C-o>
 
