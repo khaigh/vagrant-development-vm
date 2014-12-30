@@ -112,6 +112,10 @@ function _is_git_dirty
   echo (command git status -s --ignore-submodules=dirty ^/dev/null)
 end
 
+function gulpr
+  gulp 2>&1 > /dev/null &
+end
+
 function fish_prompt
   set -l cyan (set_color "cyan")
   set -l yellow (set_color "yellow")
