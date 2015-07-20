@@ -33,9 +33,10 @@ export GOROOT=/usr/local/go
 export GOPATH=$HOME/go
 export PATH=$GOROOT/bin:$PATH
 go get github.com/nsf/gocode
-go get code.google.com/p/go.tools/cmd/goimports
-go get code.google.com/p/rog-go/exp/cmd/godef
-go get code.google.com/p/go.tools/cmd/oracle
+go get golang.org/x/tools/cmd/goimports
+go get github.com/rogpeppe/godef
+go get golang.org/x/tools/cmd/oracle
+go get golang.org/x/tools/cmd/gorename
 go get github.com/golang/lint/golint
 go get github.com/kisielk/errcheck
 go get github.com/jstemmer/gotags
