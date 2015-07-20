@@ -1,2 +1,4 @@
 boxes/*
 .vagrant/*
+shared/*
+.DS_Store

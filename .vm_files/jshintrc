@@ -1,0 +1,11 @@
+{
+    "curly": true,
+    "eqeqeq": true,
+    "freeze": true,
+    "futurehostile": true,
+    "latedef": true,
+    "maxparams": 3,
+    "strict": true,
+    "undef": true,
+    "unused": true
+}

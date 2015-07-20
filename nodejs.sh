@@ -23,3 +23,12 @@ sudo apt-get install --no-install-recommends -y rubygems
 sudo gem install sass
 sudo gem install compass --pre
 
+npm install -g grunt
+npm install -g grunt-cli
+npm install -g bower
+npm install -g orion-cli
+npm install -g ddp-analyzer
+npm install -g jscs
+npm install -g jshint
+npm install -g jsonlint
+npm install -g less

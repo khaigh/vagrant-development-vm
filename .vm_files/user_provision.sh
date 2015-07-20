@@ -40,3 +40,10 @@ go get github.com/golang/lint/golint
 go get github.com/kisielk/errcheck
 go get github.com/jstemmer/gotags
 go get github.com/mattn/gom
+
+# utilities
+cp $1/serve.py $HOME/local/bin
+
+# javascript
+cp $1/jshintrc $HOME/.jshintrc
+cp $1/jscsrc $HOME/.jscsrc
